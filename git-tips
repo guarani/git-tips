@@ -1,0 +1,23 @@
+# Overwrite master with latest version of beta branch
+git checkout master
+git merge -X theirs beta
+
+# Compare two branches
+git diff --name-status master..beta
+
+# Keep their version 
+git checkout --ours index.html          
+
+# Keep my version
+git checkout --theirs index.html                
+
+# View conflicted files
+git diff --name-only --diff-filter=U                
+                     
+# When in a branch, merge with local master
+git rebase master  
+           
+# When in a branch, merge with remote master (use with caution, don't remember why)
+git pull --rebase origin master
+
+
