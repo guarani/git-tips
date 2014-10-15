@@ -5,10 +5,10 @@ git merge -X theirs beta
 # Compare two branches
 git diff --name-status master..beta
 
-# Keep their version 
+# Keep their version of a conflicted file
 git checkout --ours index.html          
 
-# Keep my version
+# Keep my version of a conflicted file
 git checkout --theirs index.html                
 
 # View conflicted files
