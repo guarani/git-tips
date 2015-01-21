@@ -20,4 +20,7 @@ git rebase master
 # When in a branch, merge with remote master (use with caution, don't remember why)
 git pull --rebase origin master
 
+# Retrieve a list of the most recently active branches.
+git for-each-ref --sort=-committerdate refs/heads/
+
 
