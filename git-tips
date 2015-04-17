@@ -23,4 +23,7 @@ git pull --rebase origin master
 # Retrieve a list of the most recently active branches.
 git for-each-ref --sort=-committerdate refs/heads/
 
+# Compare a file between two branches.
+git diff beta master -- myfile.html
+
 
