@@ -1,3 +1,9 @@
+# Before pushing changes, it's good to know what changes you've made.
+git log     # Use this to find the last commit made before you (e.g. fa275b54574d768d3628948658d00feae11a1df5)
+git diff --name-only fa275b54574d768d3628948658d00feae11a1df5..           # Shows files that have changed
+git diff fa275b54574d768d3628948658d00feae11a1df5.. MyApp/MyClass.swift   # Show what has changed in a specific file 
+
+
 # Overwrite master with latest version of beta branch
 git checkout master
 git merge -X theirs beta
