@@ -32,4 +32,8 @@ git for-each-ref --sort=-committerdate refs/heads/
 # Compare a file between two branches.
 git diff beta master -- myfile.html
 
+# Find the common commit between two branches.
+git merge-base master mybranch
 
+# Revert all view controllers modified by mybranch (ignoring those modified by master) to their state before mybranch separated from master.
+git diff --name-only master...mybranch *ViewController.swift | xargs git checkout 76d1e5ba4153c263134ac221eb37ebaa5552358f
