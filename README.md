@@ -42,11 +42,11 @@ git merge-base master mybranch
 # Revert all view controllers modified by mybranch (ignoring those modified by master) to their state before mybranch separated from master.
 git diff --name-only master...mybranch *ViewController.swift | xargs git checkout 76d1e5ba4153c263134ac221eb37ebaa5552358f
 
-# List all the json files that have been added by mybranch since it parted ways from master.
+# List all the json files that have been modified by mybranch since it parted ways from master.
 git diff --name-only master...mybranch -- '*.json'
 
-# DELETE all the json files that have been added by mybranch since it parted ways from master.
-git diff --name-only master...mybranch -- '*.json' | xargs rm   # Warning: This DELETES files.
+# *Untested* Revert all the json files that have been modified by mybranch since it parted ways from master.
+git diff --name-only master...mybranch -- '*.json' | xargs git checkout `git merge-base master mybranch`
 
 
 ```
