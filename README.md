@@ -48,5 +48,7 @@ git diff --name-only master...mybranch -- '*.json'
 # *Untested* Revert all the json files that have been modified by mybranch since it parted ways from master.
 git diff --name-only master...mybranch -- '*.json' | xargs git checkout `git merge-base master mybranch`
 
+# Retrieve a remote branch.
+git checkout -t origin/some-branch
 
 ```
