@@ -45,6 +45,9 @@ git diff --name-only master...mybranch *ViewController.swift | xargs git checkou
 # List all the json files that have been modified by mybranch since it parted ways from master.
 git diff --name-only master...mybranch -- '*.json'
 
+# List all the files changed between the last and current commit (HEAD is current commit, HEAD~ is its parent commit).
+git diff --name-only HEAD~
+
 # *Untested* Revert all the json files that have been modified by mybranch since it parted ways from master.
 git diff --name-only master...mybranch -- '*.json' | xargs git checkout `git merge-base master mybranch`
 
@@ -56,5 +59,6 @@ git checkout -t origin/some-branch
 
 # List commits showing visually the amount of changs in each commit
 git log --stat
+
 
 ```
