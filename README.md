@@ -54,4 +54,7 @@ git diff --name-only 401f58f6675bfc8b25f4cd04e352f7208abc7cebb -- . ':!imgs/logo
 # Retrieve a remote branch.
 git checkout -t origin/some-branch
 
+# List commits showing visually the amount of changs in each commit
+git log --stat
+
 ```
