@@ -60,5 +60,8 @@ git checkout -t origin/some-branch
 # List commits showing visually the amount of changs in each commit
 git log --stat
 
+# In the middle of a merge with conflicts, if you want to re-try to manually resolve a particular file
+git checkout -m path/to/a_file
+
 
 ```
